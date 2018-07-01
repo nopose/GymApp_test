@@ -11,9 +11,10 @@ using System;
 namespace GymApp.Migrations
 {
     [DbContext(typeof(GymContext))]
-    partial class GymContextModelSnapshot : ModelSnapshot
+    [Migration("20180701162840_Initial_3")]
+    partial class Initial_3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -60,24 +61,6 @@ namespace GymApp.Migrations
                     b.HasIndex("Exerciseid");
 
                     b.ToTable("Muscle");
-                });
-
-            modelBuilder.Entity("GymApp.Models.User", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Email");
-
-                    b.Property<string>("FirstName");
-
-                    b.Property<string>("LastName");
-
-                    b.Property<string>("Password");
-
-                    b.HasKey("id");
-
-                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("GymApp.Models.Muscle", b =>

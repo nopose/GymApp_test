@@ -15,10 +15,12 @@ namespace GymApp.Data
         }
 
         public DbSet<Exercise> Exercises { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Exercise>().ToTable("Exercises");
+            modelBuilder.Entity<User>().ToTable("Users");
         }
     }
 
