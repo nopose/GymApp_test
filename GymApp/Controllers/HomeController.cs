@@ -19,6 +19,11 @@ namespace GymApp.Controllers
             return View(ob);
         }
 
+        public IActionResult Login()
+        {
+            return View(new User());
+        }
+
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
